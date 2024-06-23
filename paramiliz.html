@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi princesa preciosa Liz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2e6ff; /* Color de fondo pastel */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1 {
+            color: #d89cf6; /* Color de texto morado pastel */
+        }
+
+        #fotos img { 
+            max-width: 90%; 
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        #fotos img:hover {
+            transform: scale(1.1);
+        }
+
+        .heart {
+            width: 20px;
+            height: 20px;
+            background-color: #f25ca2; 
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { top: 50px; left: 50px; opacity: 0; }
+            50% { top: 100px; left: 100px; opacity: 1; }
+            100% { top: 150px; left: 150px; opacity: 0; }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #663399;
+        }
+
+        button {
+            background-color: #d89cf6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c575e6;
+        }
+
+        #mensaje-oculto {
+            display: none;
+            margin-top: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        #mensaje-oculto.mostrar {
+            opacity: 1;
+        }
+
+        #music-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para mi princesa preciosa Liz 💖</h1>
+
+        <div id="fotos">
+            <img src="img.jpg" alt="Te amo tanto" title="Nuestro primer beso bajo la lluvia">
+            <img src="img2.jpg" alt="Eres la mujer que mas deseo" title="Esa sonrisa que me enamora cada día">
+            <img src="img3.jpg" alt="Quiero llevarte a un altar" title="Sueño con nuestro futuro juntos">
+            <img src="img4.jpg" alt="Eres mi sueño hecho realidad" title="Eres todo lo que siempre quise">
+            <img src="img5.jpg" alt="Te haré la mujer más feliz" title="Prometo amarte y cuidarte siempre">
+            <img src="img6.jpg" alt="Como vos no existe ninguna otra" title="Eres única y especial">
+        </div>
+
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+
+        <p>Mi niña hermosa, eres la luz de mis ojos, la razón de mi sonrisa y el latido de mi corazón. Cada día a tu lado es un regalo, y te amo más de lo que las palabras pueden expresar.</p>
+        <p>Eres la persona más especial en mi vida, y me siento increíblemente afortunado de tenerte a mi lado.</p>
+
+        <button onclick="mostrarMensaje()">Haz clic aquí para descubrir un mensaje especial</button>
+
+        <div id="mensaje-oculto">
+            <p>Liz, mi amor, eres mi mayor tesoro. Tu sonrisa ilumina mis días y tu amor llena mi corazón de felicidad. Eres mi compañera de aventuras, mi confidente y mi mejor amiga. Te amo con todo mi ser.</p>
+            <p>Con todo mi amor, Alexander Castrillón</p>
+        </div>
+    </div>
+    
+    <div id="music-player">
+       <a href="https://www.youtube.com/watch?v=u1VxcBAzkck" target="_blank">
+            <button>Escuchar "Love of My Life" de Queen</button>
+        </a>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            const mensajeOculto = document.getElementById("mensaje-oculto");
+            mensajeOculto.style.display = "block";
+            mensajeOculto.classList.add("mostrar");
+        }
+
+        // Animación de corazones
+        const hearts = document.querySelectorAll('.heart');
+        hearts.forEach(heart => {
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 3 + 's';
+        });
+    </script>
+</body>
+</html>
